@@ -26,8 +26,8 @@ There are two notable drawbacks:
 * poor terminal support (working on this)
 * lack of sophisticated syntax highlighting
 
-so if you require complex highlighting or consitency across your gui and remote vim experience, 
-this is not for you. Neither of these particularly impact me in my persoanl vim usage, but I **would** 
+so if you require complex highlighting or consistency across your gui and remote vim experience, 
+this is not for you. Neither of these particularly impact me in my personal vim usage, but I **would** 
 like to develop the terminal support to an acceptable level. Suggestions welcome!
 
 Because I am a web developer, Technicolor focuses on languages used for web, but I wish to extend 
@@ -56,7 +56,7 @@ Right now I intend to add support for these backend languages:
 * PHP - Blue
 * Ruby - Red (obviously)
 
-and wish to investigate other common web-backend languages in future, probably Python and possibly Java.
+and wish to investigate other common web-backend languages in future, probably Python, SQL and possibly Java.
 Also, interchange languages would be nice (XML, JSON).
 
 ### Other sets

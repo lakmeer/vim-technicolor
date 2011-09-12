@@ -173,48 +173,6 @@ hi Pmenu				guibg=black
 let s:n = s:master['neutral']
 
 
-
-function! s:readHi (group)
-
-	let s:inp = ''
-
-	redir =>> s:inp
-	execute 'silent hi ' . a:group
-	redir END
-
-	let s:inp = matchstr(s:inp, 'xxx.*')
-	let s:out = matchstr(s:inp, '.*', 4)
-
-	echo s:out
-
-	return s:out
-
-endfunction
-
-
-let s:xy = s:readHi ('Visual')
-
-echo s:xy
-
-
-let s:xyz = matchlist('abcdefg', 'a(.*)')
-
-echo s:xyz
-echo 'here'
-echo 'here'
-
-function! s:addStyle (group, style)
-
-
-
-
-endfunction
-
-
-
-
-
-
 " HTML - Default = orange
 " -----------------------
 

@@ -44,7 +44,7 @@ if you wish.
 Colour sets
 -----------
 
-*** Default set: Web development
+### Default set: Web development
 
 HTML - Orange (from [HTML5 Logo](http://www.w3.org/html/logo))
 CSS3 - Magenta (from [Modernizr](http://www.modernizr.com))
@@ -58,7 +58,7 @@ Ruby - Red (obviously)
 and wish to investigate other common web-backend languages in future, probably Python and possibly Java.
 Also, interchange languages would be nice (XML, JSON).
 
-*** Other sets
+### Other sets
 
 Other languages fall outside my experience, but if you work in a field or on a project where you're 
 using more than one language, can think of language groupings that work well together, or just want 
@@ -73,13 +73,13 @@ To request a langauge, post:
 - Suggested colour for It
 - A feature tour
 
-*** A what?
+### A what?
 
-In the demo folder here I have what I call 'feature tours', files that are (nonsense) examples of each 
+In the tour folder here I have what I call 'feature tours', files that are (nonsense) examples of each 
 language I'm trying to highlight, but which concisely demonstrate each of the syntax features that might
-be considered for highlighting. I currently only have the ones I'm capable of creating (and feel free 
-to point out where I missed a spot), so if you'd like to request a language, please include a feature 
-tour I can use to create the colouring. It just needs to include a complete demonstration of all the 
-syntax features that require consideration.
+be considered for highlighting. These probably already have a name but I don't know it. I currently only 
+have the ones I'm capable of creating (and feel free to point out where I missed a spot), so if you'd 
+like to request a language, please include a feature tour I can use to create the colouring. 
+It just needs to include a complete demonstration of all the syntax features that require consideration.
 
 

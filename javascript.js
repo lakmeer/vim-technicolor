@@ -7,9 +7,6 @@
  */
 
 
-
-
-
 // Declarations
 
 const	SOME_CONST	= 0;
@@ -66,7 +63,6 @@ switch (_z) {
 
 	case "caseA":
 		break;
-
 
 	case "caseB":
 		return;

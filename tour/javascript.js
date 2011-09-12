@@ -36,7 +36,7 @@ var primitives = {
 
 
 
-// Loops
+// Loops. TODO: fixme.
 
 for (var i = 0; i < _x; i++) {
 

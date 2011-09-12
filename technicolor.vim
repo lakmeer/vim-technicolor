@@ -25,38 +25,58 @@ let s:master['neutral'] 			= {}
 let s:master['neutral']['bright']	= '#fff'
 let s:master['neutral']['light']	= '#eee'
 let s:master['neutral']['medium']	= '#bbb'
-let s:master['neutral']['dark']	= '#666'
+let s:master['neutral']['dark']		= '#666'
 let s:master['neutral']['invert']	= '#212121'
 
 
-" Red 										default: PHP
+" Red 										default: Ruby
 let s:master['red'] 				= {}
 
-let s:master['red']['bright'] 	= '#F44'
-let s:master['red']['light']  	= '#F66'
-let s:master['red']['dark']   	= '#B33'
-let s:master['red']['invert'] 	= '#511'
+let s:master['red']['bright'] 		= '#F44'
+let s:master['red']['light']  		= '#F66'
+let s:master['red']['dark']   		= '#B33'
+let s:master['red']['invert'] 		= '#511'
 
 
 " Orange									default: HTML5
-let s:master['orange'] 			= {}
+let s:master['orange'] 				= {}
 
 let s:master['orange']['bright']	= '#FB3'
-let s:master['orange']['light']	= '#FC8'
-let s:master['orange']['dark']	= '#C80'
+let s:master['orange']['light']		= '#FC8'
+let s:master['orange']['dark']		= '#C80'
 let s:master['orange']['invert']	= '#530'
 
 
 " Green										default: JavaScript
 let s:master['green']				= {}
 
-let s:master['green']['bright']	= '#6f8'
-let s:master['green']['light']	= '#3f4'
+let s:master['green']['bright']		= '#6f8'
+let s:master['green']['light']		= '#3f4'
 let s:master['green']['dark']		= '#2b3'
-let s:master['green']['invert']	= '#151'
+let s:master['green']['invert']		= '#151'
 
 
-" Magenta									deafult: CSS3
+" Magenta									default: CSS3
+
+let s:master['magenta']				= {}
+
+let s:master['magenta']['bright']	= '#f3f'
+let s:master['magenta']['light']	= '#faf'
+let s:master['magenta']['dark']		= '#b2b'
+let s:master['magenta']['invert']	= '#515'
+
+
+" Blue										default: PHP
+
+let s:master['blue']				= {}
+
+let s:master['blue']['bright']	= '#4bf'
+let s:master['blue']['light']	= '#9ef'
+let s:master['blue']['dark']	= '#07c'
+let s:master['blue']['invert']	= '#115'
+
+
+
 
 
 
@@ -105,68 +125,149 @@ endfunction
 " Actual colour assignment begins
 " -------------------------------
 
-hi Normal				ctermbg=black	guibg=#1a1a1a    ctermfg=grey		guifg=grey
+" b:f, l:d, m:b, d:6, i:3
 
-hi Boolean                                               ctermfg=grey		guifg=grey
-hi Character                                             ctermfg=magenta	guifg=magenta
-hi Comment                                               ctermfg=darkgrey	guifg=#707070		cterm=bold
-hi Condtional                                            ctermfg=magenta	guifg=magenta
-hi Constant                                              ctermfg=magenta	guifg=magenta
-hi Cursor				guibg=white                      ctermfg=grey		guifg=grey
-hi Debug                                                 ctermfg=grey		guifg=grey
-hi Define                                                ctermfg=white		guifg=white
-hi Delimiter                                             ctermfg=grey		guifg=grey
-hi DiffAdd				ctermbg=NONE	guibg=NONE       ctermfg=NONE		guifg=NONE			cterm=NONE		gui=NONE
-hi DiffChange			ctermbg=white	guibg=white      ctermfg=darkgrey	guifg=#606060
-hi DiffDelete                                            ctermfg=darkgrey	guifg=#606060		cterm=bold
-hi DiffText				ctermbg=magenta	guibg=magenta    ctermfg=white		guifg=white
-hi Directory                                             ctermfg=white		guifg=white
-hi Error				ctermbg=magenta	guibg=red        ctermfg=white		guifg=white
-hi ErrorMsg				ctermbg=magenta	guibg=magenta    ctermfg=white		guifg=white
-hi Exception                                             ctermfg=grey		guifg=grey
-hi Float                                                 ctermfg=magenta	guifg=magenta		cterm=NONE		gui=NONE
-hi FoldColumn                                            ctermfg=grey		guifg=grey
-hi Folded                                                ctermfg=magenta	guifg=magenta
-hi Function                                              ctermfg=white		guifg=white
-hi Identifier                                            ctermfg=grey		guifg=grey
-hi Include                                               ctermfg=white		guifg=white
-hi IncSearch			ctermbg=magenta	guibg=magenta    ctermfg=darkgrey	guifg=#606060
-hi Keyword                                               ctermfg=magenta	guifg=magenta
-hi Label                                                 ctermfg=white		guifg=white
-hi LineNr                                                ctermfg=darkgrey	guifg=#606060		cterm=bold
-hi Macro                                                 ctermfg=grey		guifg=grey
-hi ModeMsg                                               ctermfg=grey		guifg=grey
-hi MoreMsg                                               ctermfg=grey		guifg=grey
-hi NonText                                               ctermfg=darkgrey	guifg=#606060		cterm=bold
-hi Number                                                ctermfg=magenta	guifg=magenta		cterm=NONE		gui=NONE
-hi Operator                                              ctermfg=white		guifg=white
-hi PreCondit                                             ctermfg=white		guifg=white
-hi PreProc                                               ctermfg=white		guifg=white
-hi Question                                              ctermfg=grey		guifg=grey
-hi Repeat                                                ctermfg=white		guifg=white			gui=bold
-hi Search                                                ctermfg=magenta	guifg=magenta
-hi SpecialChar                                           ctermfg=white		guifg=white
-hi SpecialComment                                        ctermfg=white		guifg=white
-hi Special                                               ctermfg=white		guifg=white
-hi SpecialKey			ctermbg=white	guibg=white      ctermfg=black		guifg=black
-hi Statement                                             ctermfg=white		guifg=white
-hi StatusLine			ctermbg=white	guibg=white      ctermfg=magenta	guifg=#707070
-hi StatusLineNC                                          ctermfg=grey		guifg=#404040
-hi StorageClass                                          ctermfg=white		guifg=white
-hi String                                                ctermfg=grey		guifg=grey
-hi Structure                                             ctermfg=white		guifg=white
-hi Tag                                                   ctermfg=magenta	guifg=magenta
-hi Title                                                 ctermfg=grey		guifg=grey
-hi Todo                                                  ctermfg=white		guifg=white
-hi Typedef                                               ctermfg=white		guifg=white
-hi Type                                                  ctermfg=white		guifg=white
-hi VertSplit                                             ctermfg=grey		guifg=grey
-hi Visual				ctermbg=darkgrey guibg=#333333 ctermfg=grey
-hi VisualNOS                                             ctermfg=grey		guifg=grey
-hi WarningMsg                                            ctermfg=magenta	guifg=magenta
-hi WildMenu				ctermbg=white	guibg=white      ctermfg=darkgrey	guifg=#606060
+" Normal
+hi Normal				ctermbg=black	guibg=#1a1a1a   ctermfg=grey		guifg=#bbb
 
-hi Pmenu				guibg=black
+" Cursor
+hi Cursor				guibg=#fff   	guifg=#000		ctermfg=white		ctermbg=black
+hi CursorLine							guibg=#222
+hi CursorColumn							guibg=#222
+hi Visual								guibg=#333		ctermfg=white		ctermbg=darkgrey
+hi VisualNOS                                            ctermfg=grey		
+
+" Folding
+hi Folded				guifg=#fff		guibg=#1a1a1a	ctermfg=white		ctermbg=black 
+hi FoldColumn                                           ctermfg=yellow		guifg=yellow
+
+" Window Elements
+hi StatusLine			guifg=#666		guibg=#fff		ctermfg=grey		ctermbg=red		cterm=bold
+hi StatusLineNC         guifg=#666		guibg=#000		ctermfg=white		ctermbg=black
+hi VertSplit            guifg=#666		guibg=#666   	ctermfg=grey		
+hi LineNr               guifg=#666		guibg=#1a1a1a   ctermfg=darkgrey	ctermbg=black
+
+" Popups
+hi Pmenu				guifg=#666		guibg=black		ctermfg=black		ctermbg=grey
+hi PmenuSel				guifg=#fff		guibg=black		ctermfg=red			ctermbg=grey
+hi IncSearch			guifg=#bbb		guibg=black		ctermfg=grey		ctermbg=black
+
+" call DryMany([], 'grey')
+
+hi Boolean 			guifg=#fff
+hi Character 		guifg=#fff
+hi Comment 			guifg=#666666
+hi Condtional		guifg=#fff
+hi Constant			guifg=#fff
+hi Debug			guifg=#bbb
+hi Define			guifg=#fff
+hi Delimiter		guifg=#bbb
+
+hi DiffAdd			guifg=NONE 		guibg=NONE	 	gui=NONE
+hi DiffChange		guifg=#666		guibg=#fff 
+hi DiffDelete		guifg=#666 
+hi DiffText			guifg=#fff		guibg=#1a1a1a 
+
+hi Directory		guifg=#fff
+hi Error			guifg=#fff		guibg=red 
+hi ErrorMsg 		guifg=#fff
+hi Exception		guifg=#fff
+hi Float			guifg=#fff						gui=NONE
+hi Function			guifg=#fff
+hi Identifier		guifg=#fff
+hi Include			guifg=#fff
+hi Keyword			guifg=#fff
+hi Label			guifg=#fff
+hi Macro			guifg=#bbb
+hi ModeMsg			guifg=#bbb
+hi MoreMs			guifg=#bbb
+hi NonTex			guifg=#666 
+hi Number			guifg=#fff						gui=NONE
+hi Operator			guifg=#fff
+hi PreCondit		guifg=#fff
+hi PreProc			guifg=#fff
+hi Question			guifg=#bbb
+hi Repeat			guifg=#fff						gui=bold
+hi Search			guifg=#fff
+hi SpecialChar		guifg=#fff
+hi SpecialComment	guifg=#fff
+hi Special			guifg=#fff
+hi SpecialKey		guifg=black		guibg=#fff		
+hi Statement		guifg=#fff
+hi StorageClass		guifg=#fff
+hi String			guifg=#bbb
+hi Structure		guifg=#fff
+hi Tag				guifg=#fff
+hi Title			guifg=#bbb
+hi Todo				guifg=#999		guibg=#1a1a1a		gui=bold
+hi Typedef			guifg=#fff
+hi Type				guifg=#fff
+hi WarningMsg		guifg=#fff
+hi WildMenu			guifg=#666		guibg=#fff	
+
+
+
+" Terminal fallback styles from REDBLACK.VIM - https://github.com/rdineiu/vim-redblack
+
+hi Normal         ctermbg=black  ctermfg=grey 
+hi Boolean        ctermbg=black  ctermfg=grey 
+hi Character      ctermbg=black  ctermfg=red 
+hi Comment        ctermbg=black  ctermfg=darkgrey  cterm=bold
+hi Condtional     ctermbg=black  ctermfg=red 
+hi Constant       ctermbg=black  ctermfg=red 
+hi Cursor         ctermbg=black  ctermfg=grey 
+hi Debug          ctermbg=black  ctermfg=grey 
+hi Define         ctermbg=black  ctermfg=white 
+hi Delimiter      ctermbg=black  ctermfg=grey 
+hi DiffAdd        ctermbg=NONE  ctermfg=NONE  cterm=NONE 
+hi DiffChange     ctermbg=white  ctermfg=darkgrey 
+hi DiffDelete     ctermbg=black  ctermfg=darkgrey  cterm=bold
+hi DiffText       ctermbg=red  ctermfg=white 
+hi Directory      ctermbg=black  ctermfg=white 
+hi Error          ctermbg=red  ctermfg=white 
+hi ErrorMsg       ctermbg=red  ctermfg=white 
+hi Exception      ctermbg=black  ctermfg=grey 
+hi Float          ctermbg=black  ctermfg=red  cterm=NONE 
+hi FoldColumn     ctermbg=black  ctermfg=grey 
+hi Folded         ctermbg=black  ctermfg=red 
+hi Function       ctermbg=black  ctermfg=white 
+hi Identifier     ctermbg=black  ctermfg=grey 
+hi Include        ctermbg=black  ctermfg=white 
+hi IncSearch      ctermbg=green  ctermfg=darkgrey 
+hi Keyword        ctermbg=black  ctermfg=red 
+hi Label          ctermbg=black  ctermfg=white 
+hi LineNr         ctermbg=black  ctermfg=darkgrey  cterm=bold
+hi Macro          ctermbg=black  ctermfg=grey 
+hi ModeMsg        ctermbg=black  ctermfg=grey 
+hi MoreMsg        ctermbg=black  ctermfg=grey 
+hi NonText        ctermbg=black  ctermfg=darkgrey  cterm=bold
+hi Number         ctermbg=black  ctermfg=red  cterm=NONE 
+hi Operator       ctermbg=black  ctermfg=white 
+hi PreCondit      ctermbg=black  ctermfg=white 
+hi PreProc        ctermbg=black  ctermfg=white 
+hi Question       ctermbg=black  ctermfg=grey 
+hi Repeat         ctermbg=black  ctermfg=white 
+hi Search         ctermbg=black  ctermfg=green 
+hi SpecialChar    ctermbg=black  ctermfg=white 
+hi SpecialComment ctermbg=black  ctermfg=white 
+hi Special        ctermbg=black  ctermfg=white 
+hi SpecialKey     ctermbg=white  ctermfg=black 
+hi Statement      ctermbg=black  ctermfg=white 
+hi StatusLine     ctermbg=white  ctermfg=red  
+hi StatusLineNC   ctermbg=black  ctermfg=grey 
+hi StorageClass   ctermbg=black  ctermfg=white 
+hi String         ctermbg=black  ctermfg=grey 
+hi Structure      ctermbg=black  ctermfg=white 
+hi Tag            ctermbg=black  ctermfg=red 
+hi Title          ctermbg=black  ctermfg=grey 
+hi Todo           ctermbg=black  ctermfg=white 
+hi Typedef        ctermbg=black  ctermfg=white 
+hi Type           ctermbg=black  ctermfg=white 
+hi VertSplit      ctermbg=black  ctermfg=grey 
+hi Visual         ctermbg=black  ctermfg=grey 
+hi VisualNOS      ctermbg=black  ctermfg=grey 
+hi WarningMsg     ctermbg=black  ctermfg=red 
+hi WildMenu       ctermbg=white  ctermfg=darkgrey 
 
 
 " Short reference for neutral styles
@@ -200,22 +301,22 @@ call DryColor('HtmlString',			s:n['bright'])
 " JavaScript - Green
 " ------------------
 
-let s:js = s:master['green']
-
-call DryMany (s:js['bright'], ['JavaScriptReserved', 'JavaScriptGlobal', 'JavaScriptMember', 'JavaScriptFunction', 'JavaScriptNumber', 'JavaScriptIdentifier', 'JavaScriptException'])
-call DryMany (s:js['light'],  ['JavaScriptNull', 'JavaScriptBoolean', 'JavaScriptSpecial'])
-call DryMany (s:js['dark'],   ['JavaScriptStringS', 'JavaScriptStringD', 'JavaScriptRegexpString'])
-
-call DryColor('JavaScriptMessage',		s:n['medium'])
-call DryColor('JavaScriptOperator',		s:n['bright'],		{ 'gui' : 'bold' })
-
+" let s:js = s:master['green']
+" 
+" call DryMany (s:js['bright'], ['JavaScriptReserved', 'JavaScriptGlobal', 'JavaScriptMember', 'JavaScriptFunction', 'JavaScriptNumber', 'JavaScriptIdentifier', 'JavaScriptException'])
+" call DryMany (s:js['light'],  ['JavaScriptNull', 'JavaScriptBoolean', 'JavaScriptSpecial'])
+" call DryMany (s:js['dark'],   ['JavaScriptStringS', 'JavaScriptStringD', 'JavaScriptRegexpString'])
+" 
+" call DryColor('JavaScriptMessage',		s:n['medium'])
+" call DryColor('JavaScriptOperator',		s:n['bright'],		{ 'gui' : 'bold' })
+" 
 
 
 
 " Stylesheets - Magenta
 " ---------------------
 
-let s:css = s:master['red']
+let s:css = s:master['magenta']
 
 call DryColor('cssInclude',		s:css['bright'],			{ 'gui' : 'bold' })
 call DryColor('cssMedia',		s:css['bright'],			{ 'gui' : 'bold' })
@@ -228,8 +329,8 @@ call DryColor('cssBoxAttr',		s:n['medium'], 				{ 'gui' : 'NONE' })
 call DryColor('cssRenderAttr',	s:n['medium'], 				{ 'gui' : 'NONE' })
 
 call DryMany(  s:n['light'],	[ 'cssRenderProp', 'cssBoxProp', 'cssColorProp' ])
-call DryMany(s:css['bright'], [ 'cssColor', 'cssValueLength', 'cssValueTime' ])
-call DryMany(s:css['light'],  ['cssTagName', 'cssCommonAttr' ])
-call DryMany(s:css['dark'],	[ 'cssStringQQ', 'cssStringQ', 'cssURL'])		
+call DryMany(s:css['bright'],	[ 'cssValueLength', 'cssValueTime' ])
+call DryMany(s:css['light'],	[ 'cssColor', 'cssTagName', 'cssCommonAttr' ])
+call DryMany(s:css['dark'],		[ 'cssStringQQ', 'cssStringQ', 'cssURL'])		
 
 

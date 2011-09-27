@@ -1,5 +1,5 @@
 /*
- * CSS COLORSCHEME BENCHMARK
+ * CSS COLORSCHEME FEATURE TOUR
  * 
  * Syntax highlight coloring checklist
  *
@@ -25,7 +25,7 @@ div {
 	height:			200px;
 
 	margin:			20px auto 50%;
-	padding:		20px 5%;
+	padding:		20px 0;
 
 	border:			none;
 
@@ -52,11 +52,13 @@ div {
 
 /* ID Labels, Images and CSS3 */
 
-#id {
+#id:hover {
 
 	background-color:	rgba(255, 255, 255, 0.5);
 	
 	transition:			background-color ease-in-out 1s;
+
+	border-color:		transparent;
 
 	border-radius:		10px 10px 10px 10px;
 

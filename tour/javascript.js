@@ -1,8 +1,7 @@
 /*
- * JAVASCRIPT COLORSCHEME BENCHMARK
+ * JAVASCRIPT COLORSCHEME FEATURE TOUR
  *
- * Provides examples of all the language features 
- * so you can check they highlight correctly.
+ * Syntax highlight coloring checklist
  *
  */
 

@@ -3,6 +3,7 @@ Technicolor.vim
 
 A minimalist multi-filetype colorscheme for GUI vim.
 
+Screenshot (Last updated 28 Sept 2011): http://i.imgur.com/fBkIa.png
 
 About
 -----

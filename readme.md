@@ -72,7 +72,7 @@ to see *your-favourite-language-here* supported, please request them.
 
 In the tour folder here I have what I call 'feature tours', files that are (nonsense) examples of each 
 language I'm trying to highlight, but which concisely demonstrate each of the syntax features that might
-be considered for highlighting. There's probably already a perfectly good name for this kind o file, but 
+be considered for highlighting. There's probably already a perfectly good name for this kind of file, but 
 I don't know it. I currently only have the ones I'm capable of creating (and feel free to point out where 
 I missed a spot), so if you'd like to request a language, please include a feature tour I can use to create 
 the colouring. 

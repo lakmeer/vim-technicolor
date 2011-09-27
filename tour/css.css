@@ -35,7 +35,6 @@ div {
 }
 
 
-/* Class Labels, Text & Color Properties */
 
 .class {
 
@@ -44,13 +43,11 @@ div {
 	font-size:			2em;
 	font-family: 		"Anonymous Pro", 'Liberation Sans', sans-serif;
 
-	color:				pink;
 	background:			url('../images/thisimage.png') 20px 50% repeat-x #123456;
 
 }
 
 
-/* ID Labels, Images and CSS3 */
 
 #id:hover {
 

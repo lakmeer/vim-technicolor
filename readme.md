@@ -20,7 +20,7 @@ Features
 ### Cool
 
 The main goal of this project is prettiness. There's no real reason to seperate the colours of various
-languages you use, becuase you can tell them apart just fine anyway, other than I think it's a neat idea.
+languages you use, because you can tell them apart just fine anyway, other than I think it's a neat idea.
 
 There are two notable drawbacks:
 
@@ -57,7 +57,7 @@ Right now I intend to add support for these backend languages:
 * PHP - Blue
 * Ruby - Red (obviously)
 
-and wish to investigate other common web-backend languages in future, probably Python, SQL and possibly Java.
+and wish to investigate other common web-backend languages in future, probably Python, possibly SQL. 
 Also, interchange languages would be nice (XML, JSON).
 
 ### Other sets

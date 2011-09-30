@@ -72,6 +72,18 @@ let s:master['blue']['invert']		= [ '#111155', 'darkblue' ]
 
 
 
+" Yellow									default: Interchange (XML, JSON)
+
+let s:master['yellow']				= {}
+
+let s:master['yellow']['bright']	= '#ff1'
+let s:master['yellow']['light']		= '#ff5'
+let s:master['yellow']['dark']		= '#aa6'
+let s:master['yellow']['invert']	= '#551'
+
+
+
+
 
 " At this point the only terminal colour set that
 " hasn't been used is cyan, but I don't really want
@@ -227,6 +239,126 @@ hi WildMenu			guifg=#666666		guibg=#ffffff
 
 hi Todo				guifg=#999999		guibg=#1a1a1a		gui=bold	ctermfg=black ctermbg=white
 
+hi Pmenu			guifg=#666		guibg=black		ctermfg=black		ctermbg=grey
+hi PmenuSel			guifg=#fff		guibg=black		ctermfg=red			ctermbg=grey
+hi IncSearch		guifg=#bbb		guibg=black		ctermfg=grey		ctermbg=black
+
+" call DryMany([], 'grey')
+
+hi Boolean 			guifg=#fff
+hi Character 		guifg=#fff
+hi Comment 			guifg=#666
+hi Condtional		guifg=#fff
+hi Constant			guifg=#fff
+hi Debug			guifg=#bbb
+hi Define			guifg=#fff
+hi Delimiter		guifg=#bbb
+
+hi DiffAdd			guifg=NONE 		guibg=NONE	 	gui=NONE
+hi DiffChange		guifg=#666		guibg=#fff 
+hi DiffDelete		guifg=#666 
+hi DiffText			guifg=#fff		guibg=#1a1a1a 
+
+hi Directory		guifg=#fff
+hi Error			guifg=#fff		guibg=red 
+hi ErrorMsg 		guifg=#fff
+hi Exception		guifg=#fff
+hi Float			guifg=#fff						gui=NONE
+hi Function			guifg=#fff
+hi Identifier		guifg=#fff
+hi Include			guifg=#fff
+hi Keyword			guifg=#fff
+hi Label			guifg=#fff
+hi Macro			guifg=#bbb
+hi ModeMsg			guifg=#bbb
+hi MoreMs			guifg=#bbb
+hi NonText			guifg=#666 
+hi Number			guifg=#fff						gui=NONE
+hi Operator			guifg=#fff
+hi PreCondit		guifg=#fff
+hi PreProc			guifg=#fff
+hi Question			guifg=#bbb
+hi Repeat			guifg=#fff						gui=bold
+hi Search			guifg=#fff
+hi SpecialChar		guifg=#fff
+hi SpecialComment	guifg=#fff
+hi Special			guifg=#fff
+hi SpecialKey		guifg=#000		guibg=#fff		
+hi Statement		guifg=#fff
+hi StorageClass		guifg=#fff
+hi String			guifg=#bbb
+hi Structure		guifg=#fff
+hi Tag				guifg=#fff
+hi Title			guifg=#bbb
+hi Todo				guifg=#999		guibg=#1a1a1a	gui=bold
+hi Typedef			guifg=#fff
+hi Type				guifg=#fff
+hi WarningMsg		guifg=#fff
+hi WildMenu			guifg=#666		guibg=#fff	
+
+
+
+" Terminal fallback styles from REDBLACK.VIM - https://github.com/rdineiu/vim-redblack
+
+hi Normal         ctermbg=black ctermfg=grey 
+hi Boolean        ctermbg=black ctermfg=grey 
+hi Character      ctermbg=black ctermfg=red 
+hi Comment        ctermbg=black ctermfg=darkgrey	cterm=bold
+hi Condtional     ctermbg=black ctermfg=red 
+hi Constant       ctermbg=black ctermfg=red 
+hi Cursor         ctermbg=black ctermfg=grey 
+hi Debug          ctermbg=black ctermfg=grey 
+hi Define         ctermbg=black ctermfg=white 
+hi Delimiter      ctermbg=black ctermfg=grey 
+hi DiffAdd        ctermbg=NONE	ctermfg=NONE 		cterm=NONE 
+hi DiffChange     ctermbg=white ctermfg=darkgrey 
+hi DiffDelete     ctermbg=black ctermfg=darkgrey	cterm=bold
+hi DiffText       ctermbg=red	ctermfg=white 
+hi Directory      ctermbg=black ctermfg=white 
+hi Error          ctermbg=red	ctermfg=white 
+hi ErrorMsg       ctermbg=red	ctermfg=white 
+hi Exception      ctermbg=black ctermfg=grey 
+hi Float          ctermbg=black ctermfg=red			cterm=NONE 
+hi FoldColumn     ctermbg=black ctermfg=grey 
+hi Folded         ctermbg=black ctermfg=red 
+hi Function       ctermbg=black ctermfg=white 
+hi Identifier     ctermbg=black ctermfg=grey 
+hi Include        ctermbg=black ctermfg=white 
+hi IncSearch      ctermbg=green ctermfg=darkgrey 
+hi Keyword        ctermbg=black ctermfg=red 
+hi Label          ctermbg=black ctermfg=white 
+hi LineNr         ctermbg=black ctermfg=darkgrey	cterm=bold
+hi Macro          ctermbg=black ctermfg=grey 
+hi ModeMsg        ctermbg=black ctermfg=grey 
+hi MoreMsg        ctermbg=black ctermfg=grey 
+hi NonText        ctermbg=black ctermfg=darkgrey	cterm=bold
+hi Number         ctermbg=black ctermfg=red			cterm=NONE 
+hi Operator       ctermbg=black ctermfg=white 
+hi PreCondit      ctermbg=black ctermfg=white 
+hi PreProc        ctermbg=black ctermfg=white 
+hi Question       ctermbg=black ctermfg=grey 
+hi Repeat         ctermbg=black ctermfg=white 
+hi Search         ctermbg=black ctermfg=green 
+hi SpecialChar    ctermbg=black ctermfg=white 
+hi SpecialComment ctermbg=black ctermfg=white 
+hi Special        ctermbg=black ctermfg=white 
+hi SpecialKey     ctermbg=white ctermfg=black 
+hi Statement      ctermbg=black ctermfg=white 
+hi StatusLine     ctermbg=white ctermfg=red  
+hi StatusLineNC   ctermbg=black ctermfg=grey 
+hi StorageClass   ctermbg=black ctermfg=white 
+hi String         ctermbg=black ctermfg=grey 
+hi Structure      ctermbg=black ctermfg=white 
+hi Tag            ctermbg=black ctermfg=red 
+hi Title          ctermbg=black ctermfg=grey 
+hi Todo           ctermbg=black ctermfg=white 
+hi Typedef        ctermbg=black ctermfg=white 
+hi Type           ctermbg=black ctermfg=white 
+hi VertSplit      ctermbg=black ctermfg=grey 
+hi Visual         ctermbg=black ctermfg=grey 
+hi VisualNOS      ctermbg=black ctermfg=grey 
+hi WarningMsg     ctermbg=black ctermfg=red 
+hi WildMenu       ctermbg=white ctermfg=darkgrey 
 
 
 " Short reference for neutral styles
@@ -309,5 +441,15 @@ call DryColor('phpDefine', s:php['bright'])
 call DryMany(s:php['dark'],		[ 'phpStringSingle', 'phpStringDouble' ])
 call DryMany(s:php['light'],	[ 'phpBoolean', 'phpMethodsVar' ])
 call DryMany(s:php['bright'],	[ 'phpStorageClass', 'phpFunctions', 'phpStructure' ])
+
+
+" Interchange - Yellow
+" --------------------
+
+
+let s:json = s:master['yellow']
+
+call DryMany(s:json['bright'], [ 'jsonString' ])
+
 
 

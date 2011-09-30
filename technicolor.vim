@@ -1,4 +1,4 @@
-" ------------------
+"
 " Reset that shit yo
 " ------------------
 
@@ -7,7 +7,8 @@ hi clear
 
 
 
-" -----------------------------
+
+"
 " Define s:master colour palletes
 " -----------------------------
 
@@ -15,73 +16,78 @@ hi clear
 let s:master = {}
 
 
-" TODO: Turn every colour reference into a length 2 array to provide terminal
-" colour fallbacks
-
-
 " Neutral default colors					default: All
 let s:master['neutral'] 			= {}
 
-let s:master['neutral']['bright']	= '#fff'
-let s:master['neutral']['light']	= '#eee'
-let s:master['neutral']['medium']	= '#bbb'
-let s:master['neutral']['dark']		= '#666'
-let s:master['neutral']['invert']	= '#212121'
+let s:master['neutral']['bright']	= ['#ffffff', 'white' ]
+let s:master['neutral']['light']	= ['#eeeeee', 'white' ]
+let s:master['neutral']['medium']	= ['#bbbbbb', 'grey'  ] 
+let s:master['neutral']['dark']		= ['#666666', 'darkgrey' ] 
+let s:master['neutral']['invert']	= ['#212121', 'black' ]
 
 
 " Red 										default: Ruby
 let s:master['red'] 				= {}
 
-let s:master['red']['bright'] 		= '#F44'
-let s:master['red']['light']  		= '#F66'
-let s:master['red']['dark']   		= '#B33'
-let s:master['red']['invert'] 		= '#511'
+let s:master['red']['bright'] 		= [ '#FF4444', 'red' ]
+let s:master['red']['light']  		= [ '#FF7777', 'red' ]
+let s:master['red']['dark']   		= [ '#aa2222', 'darkred' ]
+let s:master['red']['invert'] 		= [ '#551111', 'darkred' ]
 
 
 " Orange									default: HTML5
 let s:master['orange'] 				= {}
 
-let s:master['orange']['bright']	= '#FB3'
-let s:master['orange']['light']		= '#FC8'
-let s:master['orange']['dark']		= '#C80'
-let s:master['orange']['invert']	= '#530'
+let s:master['orange']['bright']	= [ '#FFBB33', 'yellow' ]
+let s:master['orange']['light']		= [ '#FFCC88', 'yellow' ]
+let s:master['orange']['dark']		= [ '#CC8800', 'darkyellow' ]
+let s:master['orange']['invert']	= [ '#553300', 'darkyellow' ]
 
 
 " Green										default: JavaScript
 let s:master['green']				= {}
 
-let s:master['green']['bright']		= '#6f8'
-let s:master['green']['light']		= '#3f4'
-let s:master['green']['dark']		= '#2b3'
-let s:master['green']['invert']		= '#151'
+let s:master['green']['bright']		= [ '#44ff66', 'green' ]
+let s:master['green']['light']		= [ '#88ffaa', 'green' ]
+let s:master['green']['dark']		= [ '#22bb33', 'darkgreen' ]
+let s:master['green']['invert']		= [ '#115511', 'darkgreen' ]
 
 
 " Magenta									default: CSS3
-
 let s:master['magenta']				= {}
 
-let s:master['magenta']['bright']	= '#f3f'
-let s:master['magenta']['light']	= '#faf'
-let s:master['magenta']['dark']		= '#b2b'
-let s:master['magenta']['invert']	= '#515'
+let s:master['magenta']['bright']	= [ '#ff33ff', 'magenta' ]
+let s:master['magenta']['light']	= [ '#ffaaff', 'magenta' ]
+let s:master['magenta']['dark']		= [ '#bb22bb', 'darkmagenta' ]
+let s:master['magenta']['invert']	= [ '#551155', 'darkmagenta' ]
 
 
 " Blue										default: PHP
-
 let s:master['blue']				= {}
 
-let s:master['blue']['bright']		= '#4bf'
-let s:master['blue']['light']		= '#9ef'
-let s:master['blue']['dark']		= '#07c'
-let s:master['blue']['invert']		= '#115'
+let s:master['blue']['bright']		= [ '#66bbff', 'blue' ]
+let s:master['blue']['light']		= [ '#aaddff', 'blue' ]
+let s:master['blue']['dark']		= [ '#5588ee', 'darkblue' ]
+let s:master['blue']['invert']		= [ '#111155', 'darkblue' ]
+
+
+
+
+" At this point the only terminal colour set that
+" hasn't been used is cyan, but I don't really want
+" a cyan GUI palette so it will probably get matched
+" to one of the palettes that doesn't have a direct
+" correlation - thinking of making this Orange if I
+" ever have a proper Yellow palette, making cyen the
+" cterm colour for HTML.
+"
 
 
 
 
 
 
-
-" ----------------------------------
+"
 " Define functions to apply palettes
 " ----------------------------------
 
@@ -89,9 +95,9 @@ let s:master['blue']['invert']		= '#115'
 " Assign colors in a way that accepts variables for dryness
 function! DryColor (name, color, ...)
 	if a:0 > 0
-		execute "hi " . a:name . " guifg=" . a:color . s:assignDetail(a:1)
+		execute "hi " . a:name . " guifg=" . a:color[0] . ' ctermfg=' . a:color[1] . ' ' . s:assignDetail(a:1)
 	else
-		execute "hi " . a:name . " guifg=" . a:color
+		execute "hi " . a:name . " guifg=" . a:color[0] . ' ctermfg=' . a:color[1]
 	endif
 endfunction
 
@@ -121,159 +127,114 @@ function! DryMany (color, list)
 
 endfunction
 
-" -------------------------------
+
+
+
+
+
+"
 " Actual colour assignment begins
 " -------------------------------
 
 " b:f, l:d, m:b, d:6, i:3
 
 " Normal
-hi Normal			ctermbg=black	guibg=#1a1a1a   ctermfg=grey		guifg=#bbb
+hi Normal				ctermbg=black	guibg=#1a1a1a   ctermfg=grey		guifg=#bbbbbb
 
 " Cursor
-hi Cursor			guibg=#fff   	guifg=#000		ctermfg=white		ctermbg=black
-hi CursorLine						guibg=#222
-hi CursorColumn						guibg=#222
-hi Visual							guibg=#333		ctermfg=white		ctermbg=darkgrey
-hi VisualNOS                                        ctermfg=grey		
+hi Cursor				guibg=#ffffff   guifg=#000000	ctermfg=white		ctermbg=black
+hi CursorLine							guibg=#222222	
+hi CursorColumn							guibg=#222222	ctermbg=white
+hi Visual								guibg=#393939	ctermfg=white		ctermbg=darkgrey
+hi VisualNOS                            	            ctermfg=grey		
 
 " Folding
-hi Folded			guifg=#fff		guibg=#1a1a1a	ctermfg=white		ctermbg=black 
-hi FoldColumn       guifg=yellow					ctermfg=yellow
+hi Folded				guifg=#bbbbbb	guibg=#1a1a1a	ctermfg=white		ctermbg=black 
+hi FoldColumn                                           ctermfg=yellow		guifg=yellow
 
 " Window Elements
-hi StatusLine		guifg=#666		guibg=#fff		ctermfg=grey		ctermbg=red		cterm=bold
-hi StatusLineNC     guifg=#666		guibg=#000		ctermfg=white		ctermbg=black
-hi VertSplit        guifg=#666		guibg=#666   	ctermfg=grey		
-hi LineNr           guifg=#666		guibg=#1a1a1a   ctermfg=darkgrey	ctermbg=black
+hi StatusLine			guifg=#444444	guibg=#dddddd 	ctermfg=black		ctermbg=white		cterm=bold
+hi StatusLineNC         guifg=#282828	guibg=#888888	ctermfg=black		ctermbg=white		cterm=NONE
+hi VertSplit            guifg=#282828	guibg=#282828   ctermfg=white		ctermbg=white		
+hi LineNr               guifg=#888888	guibg=#282828	ctermfg=darkgrey	ctermbg=grey
+hi NonText				guifg=#666666	guibg=#1a1a1a
 
 " Popups
-hi Pmenu			guifg=#666		guibg=black		ctermfg=black		ctermbg=grey
-hi PmenuSel			guifg=#fff		guibg=black		ctermfg=red			ctermbg=grey
-hi IncSearch		guifg=#bbb		guibg=black		ctermfg=grey		ctermbg=black
-
-" call DryMany([], 'grey')
-
-hi Boolean 			guifg=#fff
-hi Character 		guifg=#fff
-hi Comment 			guifg=#666
-hi Condtional		guifg=#fff
-hi Constant			guifg=#fff
-hi Debug			guifg=#bbb
-hi Define			guifg=#fff
-hi Delimiter		guifg=#bbb
-
-hi DiffAdd			guifg=NONE 		guibg=NONE	 	gui=NONE
-hi DiffChange		guifg=#666		guibg=#fff 
-hi DiffDelete		guifg=#666 
-hi DiffText			guifg=#fff		guibg=#1a1a1a 
-
-hi Directory		guifg=#fff
-hi Error			guifg=#fff		guibg=red 
-hi ErrorMsg 		guifg=#fff
-hi Exception		guifg=#fff
-hi Float			guifg=#fff						gui=NONE
-hi Function			guifg=#fff
-hi Identifier		guifg=#fff
-hi Include			guifg=#fff
-hi Keyword			guifg=#fff
-hi Label			guifg=#fff
-hi Macro			guifg=#bbb
-hi ModeMsg			guifg=#bbb
-hi MoreMs			guifg=#bbb
-hi NonTex			guifg=#666 
-hi Number			guifg=#fff						gui=NONE
-hi Operator			guifg=#fff
-hi PreCondit		guifg=#fff
-hi PreProc			guifg=#fff
-hi Question			guifg=#bbb
-hi Repeat			guifg=#fff						gui=bold
-hi Search			guifg=#fff
-hi SpecialChar		guifg=#fff
-hi SpecialComment	guifg=#fff
-hi Special			guifg=#fff
-hi SpecialKey		guifg=#000		guibg=#fff		
-hi Statement		guifg=#fff
-hi StorageClass		guifg=#fff
-hi String			guifg=#bbb
-hi Structure		guifg=#fff
-hi Tag				guifg=#fff
-hi Title			guifg=#bbb
-hi Todo				guifg=#999		guibg=#1a1a1a	gui=bold
-hi Typedef			guifg=#fff
-hi Type				guifg=#fff
-hi WarningMsg		guifg=#fff
-hi WildMenu			guifg=#666		guibg=#fff	
+hi Pmenu				guifg=#888888	guibg=#282828		ctermfg=black		ctermbg=grey
+hi PmenuSel				guifg=#ffffff	guibg=#444444		ctermfg=red			ctermbg=grey
+hi IncSearch			guifg=#bbbbbb	guibg=black		ctermfg=grey		ctermbg=black
 
 
 
-" Terminal fallback styles from REDBLACK.VIM - https://github.com/rdineiu/vim-redblack
 
-hi Normal         ctermbg=black ctermfg=grey 
-hi Boolean        ctermbg=black ctermfg=grey 
-hi Character      ctermbg=black ctermfg=red 
-hi Comment        ctermbg=black ctermfg=darkgrey	cterm=bold
-hi Condtional     ctermbg=black ctermfg=red 
-hi Constant       ctermbg=black ctermfg=red 
-hi Cursor         ctermbg=black ctermfg=grey 
-hi Debug          ctermbg=black ctermfg=grey 
-hi Define         ctermbg=black ctermfg=white 
-hi Delimiter      ctermbg=black ctermfg=grey 
-hi DiffAdd        ctermbg=NONE	ctermfg=NONE 		cterm=NONE 
-hi DiffChange     ctermbg=white ctermfg=darkgrey 
-hi DiffDelete     ctermbg=black ctermfg=darkgrey	cterm=bold
-hi DiffText       ctermbg=red	ctermfg=white 
-hi Directory      ctermbg=black ctermfg=white 
-hi Error          ctermbg=red	ctermfg=white 
-hi ErrorMsg       ctermbg=red	ctermfg=white 
-hi Exception      ctermbg=black ctermfg=grey 
-hi Float          ctermbg=black ctermfg=red			cterm=NONE 
-hi FoldColumn     ctermbg=black ctermfg=grey 
-hi Folded         ctermbg=black ctermfg=red 
-hi Function       ctermbg=black ctermfg=white 
-hi Identifier     ctermbg=black ctermfg=grey 
-hi Include        ctermbg=black ctermfg=white 
-hi IncSearch      ctermbg=green ctermfg=darkgrey 
-hi Keyword        ctermbg=black ctermfg=red 
-hi Label          ctermbg=black ctermfg=white 
-hi LineNr         ctermbg=black ctermfg=darkgrey	cterm=bold
-hi Macro          ctermbg=black ctermfg=grey 
-hi ModeMsg        ctermbg=black ctermfg=grey 
-hi MoreMsg        ctermbg=black ctermfg=grey 
-hi NonText        ctermbg=black ctermfg=darkgrey	cterm=bold
-hi Number         ctermbg=black ctermfg=red			cterm=NONE 
-hi Operator       ctermbg=black ctermfg=white 
-hi PreCondit      ctermbg=black ctermfg=white 
-hi PreProc        ctermbg=black ctermfg=white 
-hi Question       ctermbg=black ctermfg=grey 
-hi Repeat         ctermbg=black ctermfg=white 
-hi Search         ctermbg=black ctermfg=green 
-hi SpecialChar    ctermbg=black ctermfg=white 
-hi SpecialComment ctermbg=black ctermfg=white 
-hi Special        ctermbg=black ctermfg=white 
-hi SpecialKey     ctermbg=white ctermfg=black 
-hi Statement      ctermbg=black ctermfg=white 
-hi StatusLine     ctermbg=white ctermfg=red  
-hi StatusLineNC   ctermbg=black ctermfg=grey 
-hi StorageClass   ctermbg=black ctermfg=white 
-hi String         ctermbg=black ctermfg=grey 
-hi Structure      ctermbg=black ctermfg=white 
-hi Tag            ctermbg=black ctermfg=red 
-hi Title          ctermbg=black ctermfg=grey 
-hi Todo           ctermbg=black ctermfg=white 
-hi Typedef        ctermbg=black ctermfg=white 
-hi Type           ctermbg=black ctermfg=white 
-hi VertSplit      ctermbg=black ctermfg=grey 
-hi Visual         ctermbg=black ctermfg=grey 
-hi VisualNOS      ctermbg=black ctermfg=grey 
-hi WarningMsg     ctermbg=black ctermfg=red 
-hi WildMenu       ctermbg=white ctermfg=darkgrey 
+" These are the default (non-specific) styles
+"
+" TODO: Dry these up with DryMany 
+"
+" Probably some special left over, like Todo and Error
+" to set manually in the normal way
+
+hi Boolean 			guifg=#ffffff		ctermfg=white ctermbg=white cterm=bold
+hi Character 		guifg=#ffffff
+hi Comment 			guifg=#666666		ctermfg=darkgrey
+hi Condtional		guifg=#ffffff
+hi Constant			guifg=#ffffff
+hi Debug			guifg=#bbbbbb
+hi Define			guifg=#ffffff
+hi Delimiter		guifg=#bbbbbb
+
+hi DiffAdd			guifg=NONE 			guibg=NONE	 	gui=NONE	
+hi DiffChange		guifg=#666666		guibg=#ffffff 
+hi DiffDelete		guifg=#666666 
+hi DiffText			guifg=#ffffff		guibg=#1a1a1a 
+
+hi Directory		guifg=#ffffff
+hi Error			guifg=#ffffff		guibg=#dd2222	ctermfg=red	 ctermbg=red
+hi ErrorMsg 		guifg=#ffffff
+hi Exception		guifg=#ffffff
+hi Float			guifg=#ffffff						gui=NONE
+hi Function			guifg=#ffffff		ctermfg=white
+hi Identifier		guifg=#ffffff		ctermfg=white
+hi Include			guifg=#ffffff
+hi Keyword			guifg=#ffffff
+hi Label			guifg=#ffffff
+hi Macro			guifg=#bbbbbb
+hi ModeMsg			guifg=#bbbbbb
+hi MoreMs			guifg=#bbbbbb
+hi Number			guifg=#ffffff						gui=NONE
+hi Operator			guifg=#ffffff
+hi PreCondit		guifg=#ffffff
+hi PreProc			guifg=#ffffff		ctermfg=white
+hi Question			guifg=#bbbbbb
+hi Repeat			guifg=#ffffff						gui=bold
+hi Search			guifg=#ffffff
+hi SpecialChar		guifg=#ffffff		ctermfg=white		
+hi SpecialComment	guifg=#ffffff		ctermfg=white
+hi Special			guifg=#ffffff		ctermfg=white
+hi SpecialKey		guifg=black			guibg=#ffffff		
+hi Statement		guifg=#ffffff		ctermfg=white cterm=bold
+hi StorageClass		guifg=#ffffff
+hi String			guifg=#bbbbbb
+hi Structure		guifg=#ffffff
+hi Tag				guifg=#ffffff
+hi Title			guifg=#bbbbbb
+hi Typedef			guifg=#ffffff
+hi Type				guifg=#ffffff		ctermfg=white		cterm=bold
+hi WarningMsg		guifg=#ffffff
+hi WildMenu			guifg=#666666		guibg=#ffffff	
+
+" Reverse styles (in terminal)
+
+hi Todo				guifg=#999999		guibg=#1a1a1a		gui=bold	ctermfg=black ctermbg=white
+
 
 
 " Short reference for neutral styles
 let s:n = s:master['neutral']
 
 
+
+"
 " HTML - Default = orange
 " -----------------------
 
@@ -294,10 +255,11 @@ call DryColor('HtmlItalic',			s:n['medium'],			{ 'gui' : "italic" 	})
 call DryColor('HtmlTag',			s:n['light'])
 call DryColor('HtmlEndTag',			s:n['light'])
 call DryColor('HtmlString',			s:n['bright'])
- 
 
 
 
+
+"
 " JavaScript - Green
 " ------------------
 
@@ -313,6 +275,7 @@ call DryColor('JavaScriptOperator',		s:n['bright'],		{ 'gui' : 'bold' })
 
 
 
+"
 " Stylesheets - Magenta
 " ---------------------
 
@@ -329,8 +292,22 @@ call DryColor('cssBoxAttr',		s:n['medium'], 				{ 'gui' : 'NONE' })
 call DryColor('cssRenderAttr',	s:n['medium'], 				{ 'gui' : 'NONE' })
 
 call DryMany(  s:n['light'],	[ 'cssRenderProp', 'cssBoxProp', 'cssColorProp' ])
-call DryMany(s:css['bright'],	[ 'cssValueLength', 'cssValueTime' ])
-call DryMany(s:css['light'],	[ 'cssColor', 'cssTagName', 'cssCommonAttr' ])
-call DryMany(s:css['dark'],		[ 'cssStringQQ', 'cssStringQ', 'cssURL' ])		
+call DryMany(s:css['bright'],	[ 'cssValueLength', 'cssValueTime', 'cssValueNumber' ])
+call DryMany(s:css['light'],	[ 'cssColor', 'cssTagName', 'cssCommonAttr', 'cssPseudoClassId' ])
+call DryMany(s:css['dark'],		[ 'cssStringQQ', 'cssStringQ', 'cssURL'])		
+
+
+
+"
+" PHP - Blue
+" ----------
+
+let s:php = s:master['blue']
+
+call DryColor('phpDefine', s:php['bright'])
+
+call DryMany(s:php['dark'],		[ 'phpStringSingle', 'phpStringDouble' ])
+call DryMany(s:php['light'],	[ 'phpBoolean', 'phpMethodsVar' ])
+call DryMany(s:php['bright'],	[ 'phpStorageClass', 'phpFunctions', 'phpStructure' ])
 
 

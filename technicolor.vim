@@ -76,10 +76,10 @@ let s:master['blue']['invert']		= [ '#111155', 'darkblue' ]
 
 let s:master['yellow']				= {}
 
-let s:master['yellow']['bright']	= '#ff1'
-let s:master['yellow']['light']		= '#ff5'
-let s:master['yellow']['dark']		= '#aa6'
-let s:master['yellow']['invert']	= '#551'
+let s:master['yellow']['bright']	= [ '#eeee11', 'yellow' ]
+let s:master['yellow']['light']		= [ '#ffffaa', 'yellow' ]
+let s:master['yellow']['dark']		= [ '#ccbb00', 'yellow' ]
+let s:master['yellow']['invert']	= [ '#555511', 'yellow' ]
 
 
 
@@ -106,6 +106,9 @@ let s:master['yellow']['invert']	= '#551'
 
 " Assign colors in a way that accepts variables for dryness
 function! DryColor (name, color, ...)
+
+	" echo a:color
+
 	if a:0 > 0
 		execute "hi " . a:name . " guifg=" . a:color[0] . ' ctermfg=' . a:color[1] . ' ' . s:assignDetail(a:1)
 	else
@@ -448,8 +451,16 @@ call DryMany(s:php['bright'],	[ 'phpStorageClass', 'phpFunctions', 'phpStructure
 
 
 let s:json = s:master['yellow']
+let s:xml  = s:master['yellow']
 
-call DryMany(s:json['bright'], [ 'jsonString' ])
+call DryMany(s:json['bright'],	[ 'jsonNumber', 'jsonBraces' ])
+call DryMany(s:json['dark'],	[ 'jsonStringSQ' ])
+call DryMany(s:json['light'],	[ 'jsonNull', 'jsonBoolean' ])
 
+call DryMany(s:n['bright'],		[ 'jsonString' ])
 
+call DryMany(s:xml['bright'],	[ 'xmlTagName', 'xmlEndTag' ])
+call DryMany(s:xml['dark'],		[ 'xmlAttrib' ])
+call DryMany(s:xml['light'],	[ 'xmlNamespace', 'xmlEntity', 'xmlEntityPunct' ])
 
+call DryMany(s:n['bright'],		[ 'xmlString', 'xmlEqual', 'xmlAttribPunct' ])

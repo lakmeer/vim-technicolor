@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rootnode>
+
+	<node attribute-a="true" attribute-b="false">
+
+		<subnode>
+			<name>Subnode 1</name>
+			<role>Examplary</role>
+		</subnode>
+
+		<subnode>
+			<name>Subnode 2</name>
+			<role>Examplary</role>
+	
+			<subsubnode>
+				<name>Child of Subnode 2</name>
+				<role>Childish</role>
+			</subsubnode>
+
+		</subnode>
+
+	</node>
+
+	<namespaced:node>
+
+		<ns:subnode attr="attribute">
+
+			<steve>Eh, Steve!</steve>
+			<amp>Escaped &amp; Characters</amp>
+
+		</ns:subnode>
+		
+	</namespaced:node>
+
+</rootnode>
+
+
+
+

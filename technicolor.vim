@@ -242,64 +242,6 @@ hi WildMenu			guifg=#666666		guibg=#ffffff
 
 hi Todo				guifg=#999999		guibg=#1a1a1a		gui=bold	ctermfg=black ctermbg=white
 
-hi Pmenu			guifg=#666		guibg=black		ctermfg=black		ctermbg=grey
-hi PmenuSel			guifg=#fff		guibg=black		ctermfg=red			ctermbg=grey
-hi IncSearch		guifg=#bbb		guibg=black		ctermfg=grey		ctermbg=black
-
-" call DryMany([], 'grey')
-
-hi Boolean 			guifg=#fff
-hi Character 		guifg=#fff
-hi Comment 			guifg=#666
-hi Condtional		guifg=#fff
-hi Constant			guifg=#fff
-hi Debug			guifg=#bbb
-hi Define			guifg=#fff
-hi Delimiter		guifg=#bbb
-
-hi DiffAdd			guifg=NONE 		guibg=NONE	 	gui=NONE
-hi DiffChange		guifg=#666		guibg=#fff 
-hi DiffDelete		guifg=#666 
-hi DiffText			guifg=#fff		guibg=#1a1a1a 
-
-hi Directory		guifg=#fff
-hi Error			guifg=#fff		guibg=red 
-hi ErrorMsg 		guifg=#fff
-hi Exception		guifg=#fff
-hi Float			guifg=#fff						gui=NONE
-hi Function			guifg=#fff
-hi Identifier		guifg=#fff
-hi Include			guifg=#fff
-hi Keyword			guifg=#fff
-hi Label			guifg=#fff
-hi Macro			guifg=#bbb
-hi ModeMsg			guifg=#bbb
-hi MoreMs			guifg=#bbb
-hi NonText			guifg=#666 
-hi Number			guifg=#fff						gui=NONE
-hi Operator			guifg=#fff
-hi PreCondit		guifg=#fff
-hi PreProc			guifg=#fff
-hi Question			guifg=#bbb
-hi Repeat			guifg=#fff						gui=bold
-hi Search			guifg=#fff
-hi SpecialChar		guifg=#fff
-hi SpecialComment	guifg=#fff
-hi Special			guifg=#fff
-hi SpecialKey		guifg=#000		guibg=#fff		
-hi Statement		guifg=#fff
-hi StorageClass		guifg=#fff
-hi String			guifg=#bbb
-hi Structure		guifg=#fff
-hi Tag				guifg=#fff
-hi Title			guifg=#bbb
-hi Todo				guifg=#999		guibg=#1a1a1a	gui=bold
-hi Typedef			guifg=#fff
-hi Type				guifg=#fff
-hi WarningMsg		guifg=#fff
-hi WildMenu			guifg=#666		guibg=#fff	
-
-
 
 " Terminal fallback styles from REDBLACK.VIM - https://github.com/rdineiu/vim-redblack
 

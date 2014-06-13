@@ -3,7 +3,7 @@ Technicolor.vim
 
 A minimalist multi-filetype colorscheme for GUI vim.
 
-Screenshots when I get it a website.
+![Screenshot](http://i.imgur.com/Xn1gQho.png)
 
 About
 -----
@@ -11,7 +11,7 @@ About
 Inspired by minimal-palette colorschemes like [dw_colors](http://sites.google.com/site/dwcolors/)
 and especially [redblack](https://github.com/rdineiu/vim-redblack), this colorscheme has a neutral
 core with coloured highlights. The colour of the highlights depends on the filetype set in each buffer,
-to create a visual seperation of the different languages in your project.
+to create a visual seperation of different languages.
 
 
 Features
@@ -21,19 +21,11 @@ Features
 
 The main goal of this project is prettiness. There's no real reason to seperate the colours of various
 languages you use, because you can tell them apart just fine anyway, other than I think it's a neat idea.
+I don't often use terminal vim so the terminal color support is weak, although it is more-or-less working.
+If anyone can lend assistance in developing the terminal support to an acceptable level, I'd appreciate it.
 
-There are two notable drawbacks:
-
-* poor terminal support (working on this)
-* lack of sophisticated syntax highlighting
-
-so if you require complex highlighting or consistency across your gui and remote vim experience, 
-this is not for you. Neither of these particularly impact me in my personal vim usage, but I **would** 
-like to develop the terminal support to an acceptable level. Suggestions welcome!
-
-Because I am a web developer, Technicolor focuses on languages used for web, but I wish to extend 
-it to include other common multiple-language scenarios, so please add suggestions!
-
+Because I develop this theme for my own entertainment, it only supports languages I use or are interested in.
+I'm happy to accept pull requests for other languages.
 
 ### Modular
 
@@ -46,19 +38,17 @@ if you wish.
 Colour sets
 -----------
 
-### Default set: Web development
-
-* HTML - Orange (from [HTML5 Logo](http://www.w3.org/html/logo))
-* CSS3 - Magenta (from [Modernizr](http://www.modernizr.com))
-* Javascript - Green
-
-Right now I intend to add support for these backend languages:
-
+* HTML/JSP/Markdown - Orange
 * PHP - Blue
+* CSS/Less/Sass - Magenta 
+* Javascript - Green
+* Coffeescript - Red
+* Livescript - Cyan
 * Ruby - Red (obviously)
+* Actionscript - Red
+* Haskell - Green
+* Interchange formats (JSON,XML) - Yellow
 
-and wish to investigate other common web-backend languages in future, probably Python, possibly SQL. 
-Also, interchange languages would be nice (XML, JSON).
 
 ### Other sets
 
@@ -67,15 +57,11 @@ using more than one language, can think of language groupings that work well tog
 to see *your-favourite-language-here* supported, please request them.
 
 
-
 ## About feature tours
 
-In the tour folder here I have what I call 'feature tours', files that are (nonsense) examples of each 
+The 'tour' folder contains what I call 'feature tours' - files that are (nonsense) examples of each 
 language I'm trying to highlight, but which concisely demonstrate each of the syntax features that might
-be considered for highlighting. There's probably already a perfectly good name for this kind of file, but 
-I don't know it. I currently only have the ones I'm capable of creating (and feel free to point out where 
-I missed a spot), so if you'd like to request a language, please include a feature tour I can use to create 
-the colouring. 
+be considered for highlighting. There's probably name for this kind of file, but I don't know it. I
+currently only have the ones I'm capable of creating (and feel free to point out where I missed a spot),
+so if you'd like to request a language, please include a feature tour I can use to create the colouring.
 It needs to include a complete demonstration of all the syntax features that require consideration.
-
-

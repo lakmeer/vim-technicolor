@@ -1,76 +1,71 @@
 /*
- * JAVASCRIPT COLORSCHEME FEATURE TOUR
- *
- * Syntax highlight coloring checklist
+ * Javascript feature tour
  *
  */
 
-
 // Declarations
 
-const	SOME_CONST	= 0;
-var		someVar		= Infinity;
+const SOME_CONST  = 0;
+var   someVar   = Infinity;
 
 
+// Data Types
 
-// Raw Data - Strings, numbers, regex
+var stringsAndRegexes = {
+  singleq : 'single-quoted string',
+  doubleq : "double-quoted string",
+  regexp  : /^.*a\sregular (expre[!s-S]ion) \s.+*$/,
+  escape  : "here's a standard string with some \'escaped\'characters\n"
+};
 
-var rawData = {
+var primitiveTypes = {
+  'boolean primitives'  : [ false, true ],
+  'null primitives'   :   [ null, undefined ]
+};
 
-	'stringS'	:	'single-quoted string',
-	'stringD'	:	"double-quoted string",
-	'regexp'	:	/^.*a\sregular (expre[!s-S]ion) \s.+*$/,
-	'escape'	:	"here's a standard string with some \'escaped\'characters\n"
-
+var numbers = {
+  whole      : 2,
+  decimal    : 2.2,
+  negative   : -2,
+  scientific : 2.2e10
 };
 
 
+// Loops
 
-// Type primitives
-
-var primitives = {
-	'boolean primitives'	:	[ false, true ],
-	'null primitives'		: 	[ null, undefined ]
-};
-
-
-
-// Loops. TODO: fixme.
-
-for (var i = 0; i < _x; i++) {
-
-	var x = this.x;
-
+for (var i = 0; i < max; i++) {
+  var x = this.x;
 }
 
 while (x) {
-
-	var x = this.x;
-
+  var x = this.x;
 }
+
+do {
+  var x = this.x;
+} while (x);
 
 
 // Conditionals
 
 if (!someCondition === someOtherCondition && aThirdCondition) {
-
-	_z = this.z;
-
+  console.log('Usually.');
+} else if (moreConditions) {
+  console.log('Occasionally.');
+} else {
+  console.log('Never.');
 }
 
-switch (_z) {
+switch (z) {
+  case "caseA":
+    break;
 
-	case "caseA":
-		break;
+  case "caseB":
+    return;
 
-	case "caseB":
-		return;
-
-	default:
-		console.log("Even your pretend code failed. How embarrassing.");
-
+  default:
+    console.log("Even your pretend code failed. How embarrassing.");
 }
-
 
 
 // Misc operators
@@ -87,25 +82,27 @@ document.createElement('none');
 
 // Exceptions
 
-try { 
-	console.log("Go on, try.");
-
-} catch _exception {
-
-	alert("Ah, it's " + _exception);
-
+try {
+  console.log("Go on, try.");
+} catch exception {
+  alert("Ah, it's " + exception + "!");
 }
 
 
-// Closure-based module pattern
+// Class Pattern
 
-var aClosure = function (_arg) {
+var Thing = function Thing (x) {
+  var privateValue = 200;
+  this.property = x;
+  
+  var privateFunction = function () {
+    return privateValue;
+  }
 
-	var privateValue = 200;
-
-	return function () { return privateValue; }
-
+  this.publicMethod = function () {
+    this.property
 }
 
+var thing = new Thing('X');
 
 

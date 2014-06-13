@@ -1,56 +1,53 @@
-<!doctype HTML COLORSCHEME FEATURE TOUR>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Title of the Document</title>
+  <head>
+    <title>HTML Feature Tour</title>
+    <meta name="feature-tour" content="Syntax highlight coloring checklist" />
+    <link rel="stylesheet" href="a/stylesheet/here.css" />
 
-		<meta name="feature-tour" content="Syntax highlight coloring checklist" />
+    <style>
+      /* Embedded CSS */
+      .embedded-css { color: red; width: 100%; background: url('background.png'); }
+    </style>
 
-		<link rel="stylesheet" href="a/stylesheet/here.css" />
+    <script>
+      // Embedded JS
+      document.getElementById('an-id').innerHTML = 'A string';
+    </script>
 
-		<style>
-			/* Some css */
-		</style>
+    <script type="text/coffeescript">
+      # Embedded Coffee
+      x = [ x + 4 for λ, i in λs when λ i isnt 6 ]
+    </script>
 
-		<script>
-			// Some javascript
-		</script>
+    <script src="a/script/here.js"></script>
+  </head>
 
-		<script src="a/script/here.js"></script>
+  <body>
 
-	</head>
-	<body>
+    <!-- Comment  -->
 
-		<div id="div_id" class="a_classname">
+    <article id="an-id" class="a-classname">
 
-			<h1>Primary Heading</h1>
+      <h1>Primary Heading</h1>
 
-			<h2>Subheading Style 2</h2>
+      <h2>Subheading Style 2</h2>
 
-			<p>Here is some text content. In here you can find some escaped
-			entities &amp; <a href="#">links</a>, some <strong>strong</strong>
-			or <em>emphasised</em> text &mdash; and some </p>
+      <p>Here is some text content. In here you can find some escaped entities
+      &amp; <a href="#">links</a>, and some <strong>strong</strong> or
+      <em>emphasised</em> text. </p>
 
-			<h3>Subheading Style 3</h3>
+      <h3>Subheading Style 3</h3>
 
-			<p>There's not much more to say about content text really. The only
-			thing worth highlighting apart from that stuff are illegals > like &
-			these.</p>
+      <p>There's not much more to say about content text really. The only thing
+      worth highlighting apart from that stuff are illegals like > and &.</p>
 
-			<blockquote>
+      <hr />
 
-				<p>Line breaks? <br />Why not.</p>
+      <blockquote>
+        <p>Line breaks? <br />Why not.</p>
+      </blockquote>
 
-			</blockquote>
-
-			<hr />
-
-			<h4>The rest of</h4>
-			<h5>the headings</h5>
-			<h6>if you can be bothered</h6>
-		
-		</div> <!-- Comment - end of #div_id -->
-
-	</body>
+    </article>
+  </body>
 </html>
-
-

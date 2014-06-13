@@ -1,10 +1,9 @@
 /*
  * CSS COLORSCHEME FEATURE TOUR
- * 
+ *
  * Syntax highlight coloring checklist
  *
  */
-
 
 header { }
 .class { }
@@ -12,59 +11,36 @@ header { }
 @media { }
 
 
-
 /* Element name, and box model properties */
 
 div {
-
-	display:		block;
-	position:		static;
-	float:			left;
-	
-	width:			50%;
-	height:			200px;
-
-	margin:			20px auto 50%;
-	padding:		20px 0;
-
-	border:			none;
-
-	clear:			both;
-	clear:			left;
-		
+  display:    block;
+  position:   static;
+  float:      left;
+  width:      50%;
+  height:     200px;
+  margin:     20px auto 50%;
+  padding:    20px 0;
+  border:     none;
+  clear:      both;
+  clear:      left;
 }
-
-
 
 .class {
-
-	text-decoration:	underline;
-
-	font-size:			2em;
-	font-family: 		"Anonymous Pro", 'Liberation Sans', sans-serif;
-
-	background:			url('../images/thisimage.png') 20px 50% repeat-x #123456;
-
+  text-decoration:  underline;
+  font-size:      2em;
+  font-family:    "Anonymous Pro", 'Liberation Sans', sans-serif;
+  background:     url('../images/thisimage.png') 20px 50% repeat-x #123456;
 }
-
-
 
 #id:hover {
-
-	background-color:	rgba(255, 255, 255, 0.5);
-	
-	transition:			background-color ease-in-out 1s;
-
-	border-color:		transparent;
-
-	border-radius:		10px 10px 10px 10px;
-
-	box-shadow:			2px 2px 4px hsla(100, 0.5, 0.5, 0.5);
-	
-	background-clip:	padding-box;
-
+  background-color: rgba(255, 255, 255, 0.5);
+  transition:     background-color ease-in-out 1s;
+  border-color:   transparent;
+  border-radius:    10px 10px 10px 10px;
+  box-shadow:     2px 2px 4px hsla(100, 0.5, 0.5, 0.5);
+  background-clip:  padding-box;
 }
-
 
 
 /* @rules */
@@ -72,11 +48,7 @@ div {
 @import url('not/a/real/style.css');
 
 @media screen {
-
-	.sub_rule {
-
-		display: inline;
-
-	}
-	
+  .sub_rule {
+    display: inline;
+  }
 }

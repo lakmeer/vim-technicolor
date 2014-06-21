@@ -136,7 +136,7 @@ endfunction
 " b:f, l:d, m:c, d:8, i:3
 
 " Normal
-hi Normal         ctermbg=black guibg=#1a1a1a ctermfg=grey     guifg=#cccccc
+hi Normal         guibg=#1a1a1a guifg=#cccccc ctermfg=grey     ctermbg=NONE
 
 " Cursor
 hi Cursor         guibg=#ffffff guifg=#000000 ctermfg=white    ctermbg=black
@@ -148,7 +148,7 @@ hi VisualNOS                                  ctermfg=grey
 
 " Folding
 hi Folded         guibg=bg      guifg=#888888 ctermfg=white    ctermbg=black
-hi FoldColumn     guibg=bg      guifg=#888888 ctermfg=white    ctermbg=bg
+hi FoldColumn     guibg=bg      guifg=#888888 ctermfg=white    ctermbg=NONE
 
 " Window Elements
 hi StatusLine     guifg=#444444 guibg=#dddddd ctermfg=black    ctermbg=white  cterm=bold
@@ -165,8 +165,8 @@ hi Incsearch      guibg=#1a1a1a guifg=cyan    ctermfg=cyan     ctermbg=black  gu
 
 " DiffMode
 hi DiffChange       guifg=#888888 guibg=bg
-hi DiffAdd          guifg=#88ffaa guibg=bg            ctermfg=84  ctermbg=bg
-hi DiffDelete       guifg=#FF7777 guibg=bg            ctermfg=210 ctermbg=bg
+hi DiffAdd          guifg=#88ffaa guibg=bg            ctermfg=84  ctermbg=NONE
+hi DiffDelete       guifg=#FF7777 guibg=bg            ctermfg=210 ctermbg=NONE
 hi DiffText         guifg=#ffffff
 
 

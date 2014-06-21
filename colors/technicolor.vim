@@ -166,8 +166,6 @@ hi Incsearch      guibg=#1a1a1a guifg=cyan    ctermfg=cyan     ctermbg=black  gu
 
 
 
-
-
 " These are the default (non-specific) styles
 "
 " TODO: Dry these up with DryMany
@@ -224,72 +222,7 @@ hi WarningMsg       guifg=#ffffff
 hi WildMenu         guifg=#888888       guibg=#ffffff
 
 " Reverse styles (in terminal)
-
 hi Todo             guifg=#999999       guibg=#1a1a1a       gui=bold    ctermfg=black ctermbg=white
-
-
-
-" Terminal fallback styles from REDBLACK.VIM - https://github.com/rdineiu/vim-redblack
-
-hi Normal         ctermbg=black ctermfg=grey
-hi Boolean        ctermbg=black ctermfg=grey
-hi Character      ctermbg=black ctermfg=red
-hi Comment        ctermbg=black ctermfg=darkgrey    cterm=bold
-hi Condtional     ctermbg=black ctermfg=red
-hi Constant       ctermbg=black ctermfg=red
-hi Cursor         ctermbg=black ctermfg=grey
-hi Debug          ctermbg=black ctermfg=grey
-hi Define         ctermbg=black ctermfg=white
-hi Delimiter      ctermbg=black ctermfg=grey
-hi DiffAdd        ctermbg=NONE  ctermfg=NONE        cterm=NONE
-hi DiffChange     ctermbg=white ctermfg=darkgrey
-hi DiffDelete     ctermbg=black ctermfg=darkgrey    cterm=bold
-hi DiffText       ctermbg=red   ctermfg=white
-hi Directory      ctermbg=black ctermfg=white
-hi Error          ctermbg=red   ctermfg=white
-hi ErrorMsg       ctermbg=red   ctermfg=white
-hi Exception      ctermbg=black ctermfg=grey
-hi Float          ctermbg=black ctermfg=red         cterm=NONE
-hi FoldColumn     ctermbg=black ctermfg=grey
-hi Folded         ctermbg=black ctermfg=red
-hi Function       ctermbg=black ctermfg=white
-hi Identifier     ctermbg=black ctermfg=grey
-hi Include        ctermbg=black ctermfg=white
-hi Keyword        ctermbg=black ctermfg=red
-hi Label          ctermbg=black ctermfg=white
-hi LineNr         ctermbg=black ctermfg=darkgrey    cterm=bold
-hi Macro          ctermbg=black ctermfg=grey
-hi ModeMsg        ctermbg=black ctermfg=grey
-hi MoreMsg        ctermbg=black ctermfg=grey
-hi NonText        ctermbg=black ctermfg=darkgrey    cterm=bold
-hi Number         ctermbg=black ctermfg=red         cterm=NONE
-hi Operator       ctermbg=black ctermfg=white
-hi PreCondit      ctermbg=black ctermfg=white
-hi PreProc        ctermbg=black ctermfg=white
-hi Question       ctermbg=black ctermfg=grey
-hi Repeat         ctermbg=black ctermfg=white
-hi Search         ctermbg=black ctermfg=cyan
-hi SpecialChar    ctermbg=black ctermfg=white
-hi SpecialComment ctermbg=black ctermfg=white
-hi Special        ctermbg=black ctermfg=white
-hi SpecialKey     ctermbg=white ctermfg=black
-hi Statement      ctermbg=black ctermfg=white
-hi StatusLine     ctermbg=white ctermfg=red
-hi StatusLineNC   ctermbg=black ctermfg=grey
-hi StorageClass   ctermbg=black ctermfg=white
-hi String         ctermbg=black ctermfg=grey
-hi Structure      ctermbg=black ctermfg=white
-hi Tag            ctermbg=black ctermfg=red
-hi Title          ctermbg=black ctermfg=grey
-hi Todo           ctermbg=black ctermfg=white
-hi Typedef        ctermbg=black ctermfg=white
-hi Type           ctermbg=black ctermfg=white
-hi VertSplit      ctermbg=black ctermfg=grey
-hi Visual         ctermbg=black ctermfg=grey
-hi VisualNOS      ctermbg=black ctermfg=grey
-hi WarningMsg     ctermbg=black ctermfg=red
-hi WildMenu       ctermbg=white ctermfg=darkgrey
-
 
 " Short reference for neutral styles
 let s:n = s:master['neutral']

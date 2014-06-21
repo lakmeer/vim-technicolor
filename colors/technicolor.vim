@@ -54,7 +54,6 @@ let s:master['green']['light']      = [ '#88ffaa', '84', '10' ]
 let s:master['green']['dark']       = [ '#22bb33', '28', '2' ]
 let s:master['green']['invert']     = [ '#115511', '16', '2' ]
 
-
 " Magenta                                   default: CSS3
 let s:master['magenta']             = {}
 
@@ -143,13 +142,13 @@ hi Normal         ctermbg=black guibg=#1a1a1a ctermfg=grey     guifg=#cccccc
 hi Cursor         guibg=#ffffff guifg=#000000 ctermfg=white    ctermbg=black
 hi CursorLine     guibg=#222222
 hi CursorColumn   guibg=#222222               ctermbg=white
-hi MatchParen     guibg=#666666
+hi MatchParen     guibg=#666666               ctermbg=236
 hi Visual         guibg=#393939               ctermfg=white    ctermbg=darkgrey
 hi VisualNOS                                  ctermfg=grey
 
 " Folding
-hi Folded         guibg=#1a1a1a guifg=#cccccc ctermfg=white    ctermbg=black
-hi FoldColumn                   guifg=yellow  ctermfg=yellow
+hi Folded         guibg=bg      guifg=#888888 ctermfg=white    ctermbg=black
+hi FoldColumn     guibg=bg      guifg=#888888 ctermfg=white    ctermbg=bg
 
 " Window Elements
 hi StatusLine     guifg=#444444 guibg=#dddddd ctermfg=black    ctermbg=white  cterm=bold
@@ -164,28 +163,24 @@ hi PmenuSel       guifg=#ffffff guibg=#444444 ctermfg=red      ctermbg=grey
 hi Search         guibg=#1a1a1a guifg=cyan    ctermfg=cyan     ctermbg=black  gui=bold,underline
 hi Incsearch      guibg=#1a1a1a guifg=cyan    ctermfg=cyan     ctermbg=black  gui=bold,underline
 
+" DiffMode
+hi DiffChange       guifg=#888888 guibg=bg
+hi DiffAdd          guifg=#88ffaa guibg=bg            ctermfg=84  ctermbg=bg
+hi DiffDelete       guifg=#FF7777 guibg=bg            ctermfg=210 ctermbg=bg
+hi DiffText         guifg=#ffffff
 
 
 " These are the default (non-specific) styles
-"
-" TODO: Dry these up with DryMany
-"
-" Probably some special left over, like Todo and Error
-" to set manually in the normal way
+
+let s:n = s:master['neutral']
+
+call DryMany (s:n['bright'],   ['Character', 'Conditional', 'Constant', 'Define'])
 
 hi Boolean          guifg=#ffffff       ctermfg=white ctermbg=white cterm=bold
-hi Character        guifg=#ffffff
 hi Comment          guifg=#888888       ctermfg=darkgrey
-hi Condtional       guifg=#ffffff
-hi Constant         guifg=#ffffff
 hi Debug            guifg=#cccccc
-hi Define           guifg=#ffffff
 hi Delimiter        guifg=#cccccc
 
-hi DiffAdd          guifg=NONE          guibg=NONE      gui=NONE
-hi DiffChange       guifg=#888888       guibg=#ffffff
-hi DiffDelete       guifg=#888888
-hi DiffText         guifg=#ffffff       guibg=#1a1a1a
 
 hi Directory        guifg=#ffffff
 hi Error            guifg=#ffffff       guibg=#dd2222   ctermfg=red  ctermbg=red
@@ -223,10 +218,6 @@ hi WildMenu         guifg=#888888       guibg=#ffffff
 
 " Reverse styles (in terminal)
 hi Todo             guifg=#999999       guibg=#1a1a1a       gui=bold    ctermfg=black ctermbg=white
-
-" Short reference for neutral styles
-let s:n = s:master['neutral']
-
 
 
 "

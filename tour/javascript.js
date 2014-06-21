@@ -3,10 +3,10 @@
  *
  */
 
-// Declarations
+// Declarations   TODO: A todo
 
 const SOME_CONST  = 0;
-var   someVar   = Infinity;
+var   someVar     = Infinity;
 
 
 // Data Types
